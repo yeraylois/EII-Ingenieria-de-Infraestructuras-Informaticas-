@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Exámenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f9fc;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+    .question {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .exercise {
+      background-color: #e9f7ef;
+      border-left: 5px solid #28a745;
+    }
+    .back-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="menu">
+    <h1>Generador de Exámenes</h1>
+    <button id="generate">Generar Examen</button>
+    <button id="view-all">Ver Todas las Preguntas</button>
+  </div>
+
+  <div id="generator" class="hidden">
+    <h2>Examen Generado</h2>
+    <div id="generated-questions"></div>
+    <button id="back-to-menu" class="back-button">Volver al Menú</button>
+  </div>
+
+  <div id="viewer" class="hidden">
+    <h2>Todas las Preguntas</h2>
+    <div id="all-questions"></div>
+    <button id="back-to-menu-viewer" class="back-button">Volver al Menú</button>
+  </div>
+
+  <script>
+    let questions = null;
+    const minEjercicios = 2;
+    const totalPreguntas = 8;
+
+    async function loadQuestions() {
+      try {
+        const response = await fetch("questions.json");
+        if (!response.ok) throw new Error(`Error al cargar: ${response.status}`);
+        questions = await response.json();
+        console.log("Preguntas cargadas:", questions);
+      } catch (error) {
+        console.error("Error al cargar el archivo JSON:", error);
+        alert("No se pudieron cargar las preguntas. Verifica el archivo JSON.");
+      }
+    }
+
+    async function init() {
+      await loadQuestions();
+
+      document.getElementById("generate").addEventListener("click", () => {
+        if (!questions) return alert("Preguntas no cargadas. Verifica el archivo JSON.");
+        
+        const selectedQuestions = [];
+        const ejercicios = [];
+        const teorias = [];
+
+        // Clasificar preguntas en ejercicios y teorías
+        questions.temas.forEach(tema => {
+          tema.preguntas.forEach(pregunta => {
+            if (pregunta.tipo === "ejercicio") {
+              ejercicios.push(pregunta);
+            } else if (pregunta.tipo === "teoria") {
+              teorias.push(pregunta);
+            }
+          });
+        });
+
+        // Seleccionar 2 ejercicios
+        while (selectedQuestions.length < minEjercicios && ejercicios.length > 0) {
+          const randomIndex = Math.floor(Math.random() * ejercicios.length);
+          selectedQuestions.push(ejercicios.splice(randomIndex, 1)[0]);
+        }
+
+        // Seleccionar 6 teorías
+        while (selectedQuestions.length < totalPreguntas && teorias.length > 0) {
+          const randomIndex = Math.floor(Math.random() * teorias.length);
+          selectedQuestions.push(teorias.splice(randomIndex, 1)[0]);
+        }
+
+        // Mostrar preguntas generadas
+        const generatedDiv = document.getElementById("generated-questions");
+        generatedDiv.innerHTML = "";
+        selectedQuestions.forEach((q, index) => {
+          const div = document.createElement("div");
+          div.classList.add("question");
+          if (q.tipo === "ejercicio") div.classList.add("exercise");
+
+          // Manejo de saltos de línea en ejercicios
+          const enunciado = q.enunciado.replace(/\n/g, "<br>");
+          div.innerHTML = `<strong>${index + 1}.</strong> (${q.tipo.toUpperCase()}) ${enunciado}`;
+          generatedDiv.appendChild(div);
+        });
+
+        document.getElementById("menu").classList.add("hidden");
+        document.getElementById("generator").classList.remove("hidden");
+      });
+
+      document.getElementById("view-all").addEventListener("click", () => {
+        if (!questions) return alert("Preguntas no cargadas. Verifica el archivo JSON.");
+
+        const viewerDiv = document.getElementById("all-questions");
+        viewerDiv.innerHTML = "";
+
+        questions.temas.forEach(tema => {
+          const temaHeader = document.createElement("h3");
+          temaHeader.textContent = tema.tema;
+          viewerDiv.appendChild(temaHeader);
+
+          const list = document.createElement("ul");
+          tema.preguntas.forEach(pregunta => {
+            const li = document.createElement("li");
+            li.innerHTML = `(${pregunta.tipo.toUpperCase()}) ${pregunta.enunciado.replace(/\n/g, "<br>")}`;
+            list.appendChild(li);
+          });
+          viewerDiv.appendChild(list);
+        });
+
+        document.getElementById("menu").classList.add("hidden");
+        document.getElementById("viewer").classList.remove("hidden");
+      });
+
+      // Botones para volver al menú
+      document.getElementById("back-to-menu").addEventListener("click", () => {
+        document.getElementById("generator").classList.add("hidden");
+        document.getElementById("menu").classList.remove("hidden");
+      });
+
+      document.getElementById("back-to-menu-viewer").addEventListener("click", () => {
+        document.getElementById("viewer").classList.add("hidden");
+        document.getElementById("menu").classList.remove("hidden");
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

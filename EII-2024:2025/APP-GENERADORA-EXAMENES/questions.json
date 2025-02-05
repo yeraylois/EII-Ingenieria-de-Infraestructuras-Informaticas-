@@ -1,0 +1,407 @@
+{
+  "temas": [
+    {
+      "tema": "TEMA-1",
+      "preguntas": [
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la Garantía de Funcionamiento?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las dimensiones de la Garantía de Funcionamiento?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las amenazas de la Garantía de Funcionamiento y cómo se relacionan entre sí?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es un sistema tolerante a fallos, el tiempo de inactividad y el tiempo de latencia?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se clasifican los fallos según su origen?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se clasifican los fallos según su persistencia?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuándo se dice que un sistema funciona u opera en modo degradado?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué son la prevención de fallos, la tolerancia a fallos y cuáles son sus dos aproximaciones básicas?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los procesos a considerar en un sistema con la capacidad de eliminar un fallo?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué áreas de aplicación se requieren niveles de Garantía de Funcionamiento excepcionales?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la disponibilidad de un sistema, cómo se puede cuantificar y qué métricas se emplean?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se clasifican los Sistemas de Información según su disponibilidad?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuál es la diferencia entre disponibilidad y Garantía de Funcionamiento (GdF)?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la alta disponibilidad (HA) y qué es un SPOF?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los niveles de disponibilidad y sus características básicas?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la teoría de la fiabilidad y qué es la tasa de averías?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la ley de la fiabilidad exponencial y cuál es su fórmula?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se modela la fiabilidad del software?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las métricas de las averías?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se puede mejorar la disponibilidad en los sistemas de alta disponibilidad?"
+        },
+        {
+          "tipo": "ejercicio",
+          "enunciado": "Seis cámaras iguales son probadas durante 100 horas. Dos cámaras fallan tras 40 horas de funcionamiento y otras dos tras 60 horas. Calcula:\n1. La tasa de averías (λ) de este tipo de cámaras.\n2. Su fiabilidad (R) a las 100 horas.\n3. El MTTF de este tipo de cámaras.\n4. La disponibilidad (A) de un sistema de videoconferencia que use cámaras de este tipo, considerando que reemplazar una cámara averiada requiere parar el sistema durante 20 horas."
+        },
+        {
+          "tipo": "ejercicio",
+          "enunciado": "Diez GPU idénticas se prueban durante 300 horas. Dos fallan después de 125 horas de funcionamiento y tres más fallan después de 250 horas. Calcula:\n1. La tasa de averías (λ) de este tipo de GPU y su fiabilidad (R) a las 500 horas.\n2. El MTTF de este tipo de GPU considerando que cinco GPU fallan a las 350, 450, 500, 550 y 645 horas.\n3. La disponibilidad (A) de un servidor de renderización que use GPU de este tipo, considerando que reemplazar una GPU averiada requiere parar el servidor durante media hora."
+        }
+      ]
+    },
+    {
+      "tema": "TEMA-2",
+      "preguntas": [
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la redundancia y cuáles son las maneras de añadir redundancia a un sistema?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué consisten los diferentes tipos de redundancia espacial? Añade 2 ejemplos."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la redundancia de la información? Definición y ejemplos."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la redundancia hardware y cuáles son sus formas básicas?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los tipos de redundancia hardware pasiva? Añade ejemplos básicos."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la redundancia hardware activa y cuáles son sus posibles usos?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los diferentes tipos de redundancia hardware activa?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué consiste la redundancia hardware híbrida y cuáles son sus tres tipos?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las diferencias entre redundancia software y redundancia hardware?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las técnicas de recuperación ante errores de redundancia de software?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la redundancia de software multiversión? Define básicamente y explica las principales técnicas."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Define y explica en qué consiste la redundancia temporal."
+        },
+        {
+          "tipo": "ejercicio",
+          "enunciado": "Calcula el número de fallos tolerados por los siguientes diseños:\n1. 5MR\n2. TMR + 2 repuestos\n3. 4MR adaptativo + 1 repuesto."
+        },
+        {
+          "tipo": "ejercicio",
+          "enunciado": "Calcula el número de fallos tolerados por los siguientes diseños:\n1. 7MR\n2. TMR + 3 repuestos\n3. 6MR adaptativo + 2 repuestos."
+        }
+      ]
+    },
+    {
+      "tema": "TEMA-3",
+      "preguntas": [
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es un CPD?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los requisitos de un CPD?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los niveles de redundancia en un CPD? Añade ejemplos."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo clasifica el UPTIME Institute los CPDs?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Explica el criterio de disponibilidad de un CPD y nombra los 3 diseños estudiados en clase para los que se analizaron soluciones comunes."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "En cuanto al diseño mecánico de un CPD, explica los componentes típicos de un sistema de refrigeración, sus módulos de enfriamiento y la refrigeración de la sala TI."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Explica los sistemas de refrigeración más comunes en un CPD."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué son los módulos de enfriamiento de la sala TI?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseña el sistema de refrigeración de un CPD Tier 2."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseña el sistema de refrigeración de un CPD Tier 3."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseña el sistema de refrigeración de un CPD Tier 4."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseño eléctrico: ¿Cuáles son las características de un sistema de alimentación bien diseñado?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los componentes del sistema de alimentación eléctrica de un CPD?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Nombra las distintas posibilidades de redundancia del diseño eléctrico de un CPD."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se aplica la redundancia en el diseño interno de un SAI?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué redundancia existe en la alimentación de los racks de la sala TI?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué configuraciones redundantes se pueden implementar con varios SAIs?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseña el sistema eléctrico de un CPD Tier 1 y compáralo con el diseño de un CPD Tier 3."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Diseña el sistema eléctrico de un CPD Tier 2 y compáralo con el diseño de un CPD Tier 4."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cómo se diseña la red de comunicaciones en un CPD?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es el cableado estructurado según el estándar TIA-942? Explica los tipos de cableado y la organización del espacio físico del CPD en diferentes zonas funcionales."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la arquitectura lógica de red típica en un CPD? Proporciona 2 ejemplos."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las 3 configuraciones más comunes para la organización del nivel de acceso en un CPD?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los niveles de redundancia según el estándar ANSI/TIA-942?"
+        }
+      ]
+    }, {
+      "tema": "TEMA-4",
+      "preguntas": [
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué diferencias hay entre un servidor y un ordenador de uso general?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son los 7 componentes principales de un servidor, aparte de la BMC, y explícalos brevemente?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué son los servidores para rack y cuáles son los más habituales?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué son los servidores blade y qué ventajas tienen frente a los servidores de tipo rack?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Cuáles son las diferencias entre los servidores rack y los servidores blade?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué significa 'prestaciones RAS' y para qué se utiliza actualmente esta nomenclatura?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Indica alguna técnica para mejorar las prestaciones de un servidor, clasificadas según el componente en el que se implementen."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué tipo de redundancia se emplea habitualmente en las conexiones de entrada y salida de un servidor? Cita dos mecanismos para mejorar la disponibilidad de las conexiones."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es el agrupamiento de NIC y qué es el multipathing?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es un servidor FT?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es un servidor HA?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿Qué es la tecnología Lockstep?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Define 'virtualización' y explica en qué consisten la memoria virtual y los sistemas lógicos de ficheros."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Define la virtualización de servidores y menciona tres tecnologías diferentes."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué consiste la virtualización por hipervisor?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué consiste la virtualización en el kernel? Pon un ejemplo."
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "¿En qué consiste la virtualización que comparte el kernel? ¿Qué ventajas y desventajas tiene?"
+        },
+        {
+          "tipo": "teoria",
+          "enunciado": "Explica qué son los contenedores."
+        }
+      ]
+    },
+    {
+      "tema": "TEMA-5",
+      "preguntas": [
+        { "tipo": "teoria", "enunciado": "¿Qué es un clúster de servidores?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo es la arquitectura de un clúster? Explica sus componentes." },
+        { "tipo": "teoria", "enunciado": "Indica los principales tipos de clústeres en función de las necesidades que tienen que cubrir." },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los componentes básicos de los clústeres de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿En qué consiste el principio básico de diseño de un clúster HA?" },
+        { "tipo": "teoria", "enunciado": "Explica los tipos de roles en un clúster." },
+        { "tipo": "teoria", "enunciado": "¿Qué es el protocolo de heartbeat, en qué consiste y cuál es su función?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo se denomina cuando falla un nodo en un clúster de alta disponibilidad y el recurso se migra a otro nodo?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es un grupo de recursos y qué tipo de recursos se emplean en cada servicio que se ejecuta en un clúster?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es una IP virtual o flotante?" },
+        { "tipo": "teoria", "enunciado": "Cita todos los tipos de configuraciones que existen en clústeres de alta disponibilidad." },
+        { "tipo": "teoria", "enunciado": "¿Qué es la configuración asimétrica? Indica sus ventajas y desventajas." },
+        { "tipo": "teoria", "enunciado": "¿Qué es la configuración simétrica? Indica sus ventajas y desventajas." },
+        { "tipo": "teoria", "enunciado": "Indica 2 ejemplos en los que usar configuraciones con más de 2 nodos puede tener múltiples desventajas." },
+        { "tipo": "teoria", "enunciado": "Explica la configuración n a 1, indicando ventajas y desventajas." },
+        { "tipo": "teoria", "enunciado": "Explica la configuración n + 1." },
+        { "tipo": "teoria", "enunciado": "Explica la configuración n + m." },
+        { "tipo": "teoria", "enunciado": "Explica la configuración n-to-n." },
+        { "tipo": "teoria", "enunciado": "Explica la configuración 1-to-n." },
+        { "tipo": "teoria", "enunciado": "¿Qué tipos de políticas de migración de servicios existen?" },
+        { "tipo": "teoria", "enunciado": "Explica la política de pares en la migración de servicios." },
+        { "tipo": "teoria", "enunciado": "Explica la política de anillo en la migración de servicios." },
+        { "tipo": "teoria", "enunciado": "Explica la política aleatoria en la migración de servicios." },
+        { "tipo": "teoria", "enunciado": "Explica la política basada en el uso de recursos en la migración de servicios." },
+        { "tipo": "ejercicio", "enunciado": "Completa la tabla de la diapositiva 351 para analizar configuraciones de clústeres." },
+        { "tipo": "teoria", "enunciado": "¿Cómo se gestiona y sincroniza la información del estado de un clúster en sistemas de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo se realiza la monitorización de recursos y servicios en un clúster de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿En qué consiste la monitorización de nodos en un clúster de alta disponibilidad y cómo se implementa el protocolo de heartbeat?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo se realiza la recuperación automatizada ante fallos en un clúster de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son las principales diferencias entre el reinicio y la migración de un servicio en un clúster de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo controla el software de alta disponibilidad los recursos en un clúster mediante reglas, políticas y restricciones?" },
+        { "tipo": "teoria", "enunciado": "¿Qué significa el split-brain, qué técnicas se emplean para resolverlo y cuáles son?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es el quorum y qué es el witness o arbitrador?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es el cercado en un clúster?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es un clúster de balanceo de carga y cuáles son sus usos habituales?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los componentes básicos de la arquitectura de un clúster de balanceo de carga?" },
+        { "tipo": "teoria", "enunciado": "¿Cuál es la configuración típica de la red en un clúster de balanceo de carga?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son las características principales de los clústeres de balanceo de carga?" },
+        { "tipo": "teoria", "enunciado": "¿Qué algoritmos de balanceo de carga existen?" },
+        { "tipo": "teoria", "enunciado": "¿Qué tipos de balanceadores de carga hay?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son las diferentes alternativas para implementar un balanceador de carga?" },
+        { "tipo": "teoria", "enunciado": "¿Qué son los switches de balanceo de carga y cómo funcionan?" },
+        { "tipo": "teoria", "enunciado": "Explica qué son los contenedores." }
+      ]
+    },
+    {
+      "tema": "TEMA-7",
+      "preguntas": [
+        { "tipo": "teoria", "enunciado": "¿Qué es la computación en la nube?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es la computación en la nube según el NIST?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es el modelo 5-3-4 del NIST y cuáles son los integrantes de cada categoría?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los modelos de servicio en computación en la nube según el NIST?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los modelos de despliegue en computación en la nube según el NIST?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los beneficios de utilizar la computación en la nube?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son los retos a la hora de emplear la computación en la nube?" },
+        { "tipo": "teoria", "enunciado": "¿Qué recomendaciones deben seguirse al emplear la computación en la nube?" },
+        { "tipo": "teoria", "enunciado": "¿Cómo se organiza la infraestructura de AWS y cuáles son sus componentes principales?" },
+        { "tipo": "teoria", "enunciado": "¿Qué ofrece el servicio EC2 de AWS?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es el EBS y qué ofrece?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es el servicio S3 y qué ofrece?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es la VPC de AWS y cuáles son sus componentes principales?" },
+        { "tipo": "teoria", "enunciado": "¿Qué función cumple el servicio ELB de AWS?" },
+        { "tipo": "teoria", "enunciado": "¿De qué se encarga EC2 Auto Scaling?" },
+        { "tipo": "teoria", "enunciado": "¿Qué es una IP elástica en AWS?" },
+        { "tipo": "teoria", "enunciado": "¿Qué elementos son necesarios en una arquitectura tolerante a fallos?" },
+        { "tipo": "teoria", "enunciado": "¿Qué elementos son necesarios en una arquitectura de alta disponibilidad?" },
+        { "tipo": "teoria", "enunciado": "¿Cuáles son las credenciales de seguridad que posee AWS?" }
+      ]
+    }
+  ]
+}
